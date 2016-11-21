@@ -54,7 +54,7 @@ Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
 
 	- Sign up at https://www.ibm.com/watson/developercloud/speech-to-text.html and obtain an IBM Watson Speech to text username and password.
 
-	- Open Watson.py with your IDE and place your username and password for IBM_USERNAME and IBM_PASSWORD
+	- Open watson.py with your IDE and enter your username and password for IBM_USERNAME and IBM_PASSWORD
 
 	- In terminal enter: `python watson.py`
 
@@ -68,7 +68,7 @@ Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
 
 1. cd to Speech-Hacker/src
 
-2. Open myspeech.txt and type whatever you would like the figure to say. 
+2. Open myspeech.txt and type whatever you want your figure to say. 
 
 	- Notice: You can take a look at myDict.py and have a quick glance over all the words and phrases that were created
 
