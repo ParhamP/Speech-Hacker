@@ -26,30 +26,31 @@ source = 'speeches'
 for root, dirs, filenames in os.walk(source):
 	for file in filenames:
 		print file
-		sound_file = AudioSegment.from_wav("speeches/" + file)
-		audio_chunks = split_on_silence(sound_file, 
+		if file != ".DS_Store":
+			sound_file = AudioSegment.from_wav("speeches/" + file)
+			audio_chunks = split_on_silence(sound_file, 
 
-		    # must be silent for at least 1 millisecond
-		    min_silence_len=1,
+			    # must be silent for at least 1 millisecond
+			    min_silence_len=1,
 
-		    # consider it silent if quieter than -50 dBFS
-		    silence_thresh=-50
-		)
+			    # consider it silent if quieter than -50 dBFS
+			    silence_thresh=-50
+			)
 
-		for i, chunk in enumerate(audio_chunks):
-		    out_file = "chunks/audio{0}.wav".format(i)
-		    print out_file
-		    print "exporting", out_file
+			for i, chunk in enumerate(audio_chunks):
+			    out_file = "chunks/audio{0}.wav".format(i)
+			    print out_file
+			    print "exporting", out_file
 
-		    # export the chunked files to chunks folder
-		    chunk.export(out_file, format="wav")
-		    with contextlib.closing(wave.open(out_file,'r')) as g:
-			    frames = g.getnframes()
-			    rate = g.getframerate()
+			    # export the chunked files to chunks folder
+			    chunk.export(out_file, format="wav")
+			    with contextlib.closing(wave.open(out_file,'r')) as g:
+				    frames = g.getnframes()
+				    rate = g.getframerate()
 
-			    # calculate the duration of the chunked WAV file
-			    duration = frames / float(rate)
+				    # calculate the duration of the chunked WAV file
+				    duration = frames / float(rate)
 
-			    # only move the files that are between 0.5 second to 1.5 second to the filtered folder
-			    if duration > 0.5 and duration < 2:
-			    	os.rename(out_file, "filtered/" + "audio{0}.wav".format(i))
+				    # only move the files that are between 0.5 second to 1.5 second to the filtered folder
+				    if duration > 0.5 and duration < 2:
+				    	os.rename(out_file, "filtered/" + "audio{0}.wav".format(i))
