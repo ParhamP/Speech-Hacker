@@ -12,6 +12,11 @@ Speech-Hacker takes a large data base of audio speeches spoken by your chosen fi
 
 I'll show you how to get started:
 
+[1. Dependencies](https://github.com/ParhamP/Speech-Hacker#dependencies "Dependencies")
+[2. Install](https://github.com/ParhamP/Speech-Hacker#install "Install")
+[3. Up and Running](https://github.com/ParhamP/Speech-Hacker#up-and-running "Up and Running")
+[4. Usage](https://github.com/ParhamP/Speech-Hacker#usage "Usage")
+
 ## Dependencies
 
 1. Python 2.7
