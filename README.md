@@ -50,7 +50,7 @@ Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
 
 6. Now, you have two choices for using SpeechRecognition:
 
-	### IBM Watson (Excelent Quality) (Online)
+	#### 1. IBM Watson (Excelent Quality) (Online)
 
 	- Sign up at https://www.ibm.com/watson/developercloud/speech-to-text.html and obtain an IBM Watson Speech to text username and password.
 
@@ -58,7 +58,7 @@ Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
 
 	- In terminal enter: `python watson.py`
 
-	### Or Sphinx (Ok Quality) (Offline)
+	#### 2. Or Sphinx (Ok Quality) (Offline)
 
 	- In terminal enter: `python sphinx.py`
 
