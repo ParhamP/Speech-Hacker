@@ -26,8 +26,10 @@ for root, dirs, filenames in os.walk(speechSource):
 				asciidata=udata.encode("ascii","ignore")[:-1]
 
 				# Create a dictionary with keys being the text data that was received and with values being relative addresses of audios
-				dict[asciidata] = "filtered/" + file
+				dict[asciidata.lower()] = "filtered/" + file
 				print("")
+
+dict["*pause"] = "filtered/pause.wav"
 
 # Create a file to put the generated dictionary in it
 output_file = open('myDict.py', 'w')

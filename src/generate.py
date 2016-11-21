@@ -49,5 +49,8 @@ for i in range(len(textList)):
 	# Handle index errors
 	except IndexError:
 		continue
+res = 0
+while(os.path.exists("output" + str(res) + ".wav")):
+	res +=1
 # Use ffmpeg to process the generated list.txt and create a new audio file containing the speech of the text you had as input
-subprocess.Popen('ffmpeg -y -f concat -i list.txt -c copy output.wav', shell=True, stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+subprocess.Popen('ffmpeg -y -f concat -i list.txt -c copy output' + str(res) + '.wav', shell=True, stdout=subprocess.PIPE,stderr=subprocess.PIPE)

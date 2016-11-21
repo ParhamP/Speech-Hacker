@@ -10,16 +10,17 @@ Would you like to make any famous figure speak whatever you want? Use Speech-Hac
 
 Speech-Hacker takes a large data base of audio speeches spoken by your chosen figure and uses PyDub to split them on words based on the amount of silence between them. It then creates smaller chunks of audio files containing words or small phrases. Speech-Hacker then uses the SpeechRecognition Library to convert audio chunks to text. At the end, your desired speech's words and phrases get associated with chunks of audio that were created and converted, so that you can receive a brand new speech spoken by your figure.
 
-I'll show you how. Let's get started:
+I'll show you how to get started:
 
 ## Dependencies
 
 1. Python 2.7
 
-2. PyDub
+2. PyDub: `pip install pydub`
 
-3. SpeechRecognition
+3. SpeechRecognition: `pip install SpeechRecognition`
 
+4. ffmpeg: `brew install ffmpeg --with-libvorbis --with-ffplay --with-theora` (Mac), `apt-get install ffmpeg libavcodec-extra-53` (Linux)
 
 
 ## Install
@@ -38,7 +39,7 @@ Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
 
 5. In terminal enter: `python cut.py`.
 
-6. Now, you have to choice for using SpeechRecognition:
+6. Now, you have two choices for using SpeechRecognition:
 
 	### 1. IBM Watson (Excelent Quality) (Online)
 
@@ -58,8 +59,8 @@ Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
 
 1. cd to Speech-Hacker/src
 
-2. Open myspeech.txt and type whatever you would like the figure to say. Save.
+2. Open myspeech.txt and type whatever you would like the figure to say. (You can take a look at myDict.py and have a quick glance over all the words and phrases that were created). Save the file. Notice: To make the speaker pause, type *pause whenever you want. 
 
 2. In terminal enter: `python generate.py`
 
-3. Tada! An audio file named "output.wav" is created in the directory. 
+3. Tada! An audio file for the requested speech is created in the directory. 
