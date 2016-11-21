@@ -33,8 +33,9 @@ for root, dirs, filenames in os.walk(speechSource):
 
 				# Create a dictionary with keys being the text data that was received and with values being relative addresses of audios
 				dict[asciidata.lower()] = "filtered/" + file
-				print("")
+				print("Process...")
 dict["*pause"] = "filtered/pause.wav"
+print("Success!")
 
 # Create a file to put the generated dictionary in it
 output_file = open('myDict.py', 'w')

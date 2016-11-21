@@ -58,7 +58,7 @@ Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
 
 	- In terminal enter: `python watson.py`
 
-	### 2. Or Sphinx (Poor Quality) (Offline)
+	### 2. Or Sphinx (Ok Quality) (Offline)
 
 	- In terminal enter: `python sphinx.py`
 
