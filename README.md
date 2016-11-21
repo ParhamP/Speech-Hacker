@@ -40,17 +40,17 @@ Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
 
 6. Now, you have to choice for using SpeechRecognition:
 
-	1. IBM Watson (Excelent Quality) (Online)
+	### 1. IBM Watson (Excelent Quality) (Online)
 
-	Sign up at https://www.ibm.com/watson/developercloud/speech-to-text.html and obtain an IBM Watson Speech to text username and password.
+		- Sign up at https://www.ibm.com/watson/developercloud/speech-to-text.html and obtain an IBM Watson Speech to text username and password.
 
-	* Open Watson.py with your IDE and place your username and password for IBM_USERNAME and IBM_PASSWORD
+		- Open Watson.py with your IDE and place your username and password for IBM_USERNAME and IBM_PASSWORD
 
-	* In terminal enter: `python watson.py`
+		- In terminal enter: `python watson.py`
 
-	2. Or Sphinx (Poor Quality) (Offline)
+	### 2. Or Sphinx (Poor Quality) (Offline)
 
-	* In terminal enter: `python sphinx.py`
+		- In terminal enter: `python sphinx.py`
 
 **Notice** : Step 6 may take hours to process. BUT, You only need to do the Up and Running steps once and from here you will only use the data base that you built to make speeches.
 
