@@ -4,9 +4,11 @@
 [![IMAGE ALT TEXT](images/screen.png)](https://www.youtube.com/watch?v=pV8FQpc1NlQ "Youtube_Video" )
 
 
+## Description
+
 Would you like to make any famous figure speak whatever you want? Use Speech-Hacker to train your own speaker and receive speeches spoken by them.
 
-Speech-Hacker takes a large data base of audio speeches spoken by your chosen figure and uses PyDub to split them on words based on the amount of silence between them. It then creates smaller chunks of audio files containing words or small phrases. Speech-Hacker then uses the SpeechRecognition Library to convert audio chunks to text. At the end, your desired speech's words and phrases get associated with chunks of audio that was created and converted, so that you can receive a brand new speech spoken by your figure.
+Speech-Hacker takes a large data base of audio speeches spoken by your chosen figure and uses PyDub to split them on words based on the amount of silence between them. It then creates smaller chunks of audio files containing words or small phrases. Speech-Hacker then uses the SpeechRecognition Library to convert audio chunks to text. At the end, your desired speech's words and phrases get associated with chunks of audio that were created and converted, so that you can receive a brand new speech spoken by your figure.
 
 I'll show you how. Let's get started:
 
