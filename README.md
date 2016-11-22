@@ -70,15 +70,12 @@ Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
 
 2. Open myspeech.txt and type whatever you want your figure to say. 
 
-	- Notice: You can take a look at myDict.py and have a quick glance over all the words and phrases that were created
-
-	- Notice: Save the file. 
-
-	- Notice: To make the speaker pause, type *pause whenever you want. 
-
-	- Notice: Only use lower case letters
-
-	- Notice: Don't use periods, commas or other non-alphabetic characters
+	>**Notice:**  
+	> * You can take a look at myDict.py and have a quick glance over all the words and phrases that were created  
+	> * Save the file.  
+	> * To make the speaker pause, type *pause whenever you want.  
+	> * Only use lower case letters  
+	> * Don't use periods, commas or other non-alphabetic characters   
 
 3. In terminal enter: `python generate.py`
 
