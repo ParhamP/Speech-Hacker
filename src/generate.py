@@ -27,30 +27,25 @@ output_file = open('list.txt', 'w')
 # Split the text on spaces and create a list with them
 textList = text.split(" ")
 
-# Loop through the list to receive the address of the audio file associated with the input fiven in speech.text
+# Loop through the list to receive the address of the audio file associated with the input given in speech.text
 for i in range(len(textList)):
-	try:
+    try:
 		# We basically try to check whether we can find audio files for our input if some of them get attached
 		# Therefore here we try different concatenations of elements in textList to extend our chance of finding audio files for our input
-		if textList[i] in myDict.keys():
+        for j in range(1,7):
+            desired_key = " ".join([textList[i+x] for x in range(j) ])
+            if desired_key in myDict.keys():
+                # Write the found audio address in the output_file in a format that will be readible by ffmpeg
+                output_file.write("file "+ myDict[desired_key] + "\n")
+                break
 
-			# Write the found audio address in the output_file in a format that will be readible by ffmpeg
-			output_file.write("file " + myDict[textList[i]] + "\n")
-		elif textList[i] + " " + textList[i+1] in myDict.keys():
-			output_file.write("file " + myDict[textList[i] + " " + textList[i+1]] + "\n")
-		elif textList[i] + " " + textList[i+1] + " " + textList[i+2] in myDict.keys():
-			output_file.write("file " + myDict[textList[i] + " " + textList[i+1] + " " + textList[i+2] ] + "\n")
-		elif textList[i] + " " + textList[i+1] + " " + textList[i+2] + " " + textList[i+3] in myDict.keys():
-			output_file.write("file " + myDict[textList[i] + " " + textList[i+1] + " " + textList[i+2] + " " + textList[i+3] ] + "\n")
-		elif textList[i] + " " + textList[i+1] + " " + textList[i+2] + " " + textList[i+3] + " " + textList[i+4] in myDict.keys():
-			output_file.write("file " + myDict[textList[i] + " " + textList[i+1] + " " + textList[i+2] + " " + textList[i+3] + " " + textList[i+4] ] + "\n")
-		elif textList[i] + " " + textList[i+1] + " " + textList[i+2] + " " + textList[i+3] + " " + textList[i+4] + " " + textList[i+5] in myDict.keys():
-			output_file.write("file " + myDict[textList[i] + " " + textList[i+1] + " " + textList[i+2] + " " + textList[i+3] + " " + textList[i+4] + " " + textList[i+5] ] + "\n")
+
+
 	# Handle index errors
-	except IndexError:
-		continue
+    except IndexError:
+        continue
 res = 0
 while(os.path.exists("output" + str(res) + ".wav")):
-	res +=1
+    res +=1
 # Use ffmpeg to process the generated list.txt and create a new audio file containing the speech of the text you had as input
 subprocess.Popen('ffmpeg -y -f concat -i list.txt -c copy output' + str(res) + '.wav', shell=True, stdout=subprocess.PIPE,stderr=subprocess.PIPE)
