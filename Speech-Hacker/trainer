@@ -1,0 +1,105 @@
+#!/usr/bin/env python
+
+from SimpleAudioIndexer import SimpleAudioIndexer
+from shutil import rmtree
+import argparse
+import os
+import subprocess
+
+
+class Trainer(object):
+    def __init__(self, username, password, src_dir, model):
+        self.username = username
+        self.password = password
+        self.src_dir = src_dir
+        self.model = model
+        self.__enter__()
+
+    def __enter__(self):
+        for directory in ["dictionary", "dictionary/temp"]:
+            if not os.path.exists("{}/{}".format(self.src_dir, directory)):
+                os.mkdir("{}/{}".format(self.src_dir, directory))
+        return self
+
+    def __exit__(self, *args):
+        rmtree("{}/dictionary/temp".format(self.src_dir))
+
+    def audio_word_extractor(self, audio_file_basename, src_dir, word,
+                             starting_second, ending_second, in_temp=False):
+        subprocess.Popen(
+            "sox {}/{} {}/dictionary{}/{}.wav trim {} {}".format(
+                self.src_dir, audio_file_basename, self.src_dir,
+                "/temp" * (in_temp), word, starting_second,
+                ending_second - starting_second),
+            shell=True).communicate()
+
+    def dictionary_maker(self, verbose):
+        temp_to_dict_dir = (
+            lambda: subprocess.Popen(
+                "mv {}/dictionary/temp/{}.wav {}/dictionary/{}.wav".format(
+                    self.src_dir, word, self.src_dir, word),
+                shell=True).communicate()
+        )
+        indexer = SimpleAudioIndexer(self.username, self.password,
+                                     self.src_dir, verbose=verbose)
+        indexer.index_audio(model=self.model)
+        timestamps = indexer.get_timestamped_audio()
+        for audio_basename in timestamps:
+            for word_block in timestamps[audio_basename]:
+                word = (word_block[0]).replace("'", "_")
+                starting_second = word_block[1]
+                ending_second = word_block[2]
+                if verbose:
+                    if word != word_block[0]:
+                        print (str(word_block[0]) +
+                               " contains ' character, replacing with _")
+                self.audio_word_extractor(audio_basename, self.src_dir, word,
+                                          starting_second, ending_second,
+                                          in_temp=True)
+                if verbose:
+                    print ("{} was extracted from {} and saved in " +
+                           "{}/dictionary/temp").format(word, audio_basename,
+                                                        self.src_dir)
+                try:
+                    temp_word_size = os.path.getsize(
+                        "{}/dictionary/temp/{}.wav".format(self.src_dir, word))
+                    dict_word_size = os.path.getsize(
+                        "{}/dictionary/{}.wav".format(
+                            self.src_dir, word))
+                    if (dict_word_size < temp_word_size):
+                        temp_to_dict_dir()
+                        if verbose:
+                            print ("Temp version of {} has better quality, " +
+                                   "moving to production").format(word)
+                except OSError:
+                    temp_to_dict_dir()
+                    if verbose:
+                        print ("{} is not in production, " +
+                               "moving to production...").format(word)
+
+
+def argument_handler():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-u", "--username", help="IBM Watson API Username",
+                        type=str, required=True)
+    parser.add_argument("-p", "--password", help="IBM Watson API Password",
+                        type=str, required=True)
+    parser.add_argument("-d", "--src_dir",
+                        help="Absolute path to ource directory for audio files",
+                        type=str, required=True)
+    parser.add_argument("-m", "--model", type=str,
+                        help=("Model that'd be used for Watson, default is" +
+                              " en-US_BroadbandModel"),
+                        default="en-US_BroadbandModel")
+    parser.add_argument("-v", "--verbose", help="print stage of the program",
+                        action='store_true')
+    args = parser.parse_args()
+    return (args.username, args.password, args.src_dir, args.model,
+            args.verbose)
+
+
+if __name__ == '__main__':
+    username, password, src_dir, model, verbose = argument_handler()
+    trainer = Trainer(username, password, src_dir, model=model)
+    with trainer as training_context:
+        training_context.dictionary_maker(verbose=verbose)
