@@ -25,8 +25,11 @@ I'll show you how to get started:
 ## Dependencies
 
 1. Python 2.7
+
 2. Simple Audio Indexer
+
 3. IBM Watson Speech API Username and Password
+
 3. ffmpeg: `brew install ffmpeg --with-libvorbis --with-ffplay --with-theora` (Mac), `apt-get install ffmpeg libavcodec-extra-53` (Linux)
 
 
