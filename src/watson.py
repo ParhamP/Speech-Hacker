@@ -33,7 +33,7 @@ r = sr.Recognizer()
 
 # Loop through the folder of filtered audios
 for root, dirs, filenames in os.walk(speechSource):
-	for file in filenames:
+	for idx, file in enumerate(filenames):
 		if file != ".DS_Store":
 			with sr.AudioFile("filtered/" + file) as sourcenew:
 				audio = r.record(sourcenew)
@@ -48,7 +48,8 @@ for root, dirs, filenames in os.walk(speechSource):
 
 				# Create a dictionary with keys being the text data that was received and with values being relative addresses of audios
 				dict[asciidata.lower()] = "filtered/" + file
-				print("Process...")
+				print("\rProcessing...{:.2f}%".format(100*float(idx)/len(filenames))),
+print("\rProcessing complete!")
 dict["*pause"] = "filtered/pause.wav"
 print("Success!")
 
