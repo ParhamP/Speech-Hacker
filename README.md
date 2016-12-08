@@ -54,7 +54,7 @@ I'll show you how to get started:
 
 ### Command for training a model
 
-`speech-hacker -train -u IBM_USERNAME -p IBM_PASSWORD -d ABS_PATH_TO_YOUR_AUDIO_FILES_FOLDER`
+`Speech-hacker -train -u IBM_USERNAME -p IBM_PASSWORD -d ABS_PATH_TO_YOUR_AUDIO_FILES_FOLDER`
 
 
 ### Command for generating your custom speech
