@@ -8,7 +8,8 @@
 
 Would you like to make any famous figure speak whatever you want? Use Speech-Hacker to train your own speaker and receive speeches spoken by them.
 
-Speech-Hacker takes a large data base of audio speeches spoken by your chosen figure and uses PyDub to split them on words based on the amount of silence between them. It then creates smaller chunks of audio files containing words or small phrases. Speech-Hacker then uses the SpeechRecognition Library to convert audio chunks to text. At the end, your desired speech's words and phrases get associated with chunks of audio that were created and converted, so that you can receive a brand new speech spoken by your figure.
+Speech-Hacker takes a large data base of audio speeches spoken by your chosen figure and uses Simple Audio Indexer to split them on words and to create smaller chunks of audio files containing those words. Finally, your desired speech's words and phrases get associated with audio chunks that were created and converted, so that you can receive a brand new speech spoken by your figure.
+
 
 I'll show you how to get started:
 
@@ -16,7 +17,7 @@ I'll show you how to get started:
 
    2. [Install](https://github.com/ParhamP/Speech-Hacker#install "Install")
 
-   3. [Up and Running](https://github.com/ParhamP/Speech-Hacker#up-and-running "Up and Running")
+   3. [Setup](https://github.com/ParhamP/Speech-Hacker#setup "Setup")
 
    4. [Usage](https://github.com/ParhamP/Speech-Hacker#usage "Usage")
 
@@ -24,62 +25,52 @@ I'll show you how to get started:
 ## Dependencies
 
 1. Python 2.7
-
-2. PyDub: `pip install pydub`
-
-3. SpeechRecognition: `pip install SpeechRecognition`
-
-4. ffmpeg: `brew install ffmpeg --with-libvorbis --with-ffplay --with-theora` (Mac), `apt-get install ffmpeg libavcodec-extra-53` (Linux)
+2. Simple Audio Indexer
+3. IBM Watson Speech API Username and Password
+3. ffmpeg: `brew install ffmpeg --with-libvorbis --with-ffplay --with-theora` (Mac), `apt-get install ffmpeg libavcodec-extra-53` (Linux)
 
 
 ## Install
 
-Download or `git clone https://github.com/ParhamP/Speech-Hacker.git`
+pip install speech-hacker
 
-## Up and Running
+
+## Setup
+
 
 1. Choose your figure(s).
 
-2. Browse the internet to find hours of relatively good quality audio files spoken by your figure. (Convert them to WAV)
+2. Browse the internet to find reasonable amount of relatively good quality audio files spoken by your figure. (Convert them to WAV)
 
-3. cd to Speech-Hacker/src
+3. Place all the audio files in a folder
 
-4. Place your audio files you got in "speeches" folder.
+4. Acquire IBM Watson Speech to Text username and password at https://www.ibm.com/watson/developercloud/speech-to-text.html and obtain an IBM Watson Speech to text username and password. (For help visit: https://www.ibm.com/watson/developercloud/doc/getting_started/gs-credentials.shtml)
 
-5. In terminal enter: `python cut.py`.
-
-6. Now, you have two choices for using SpeechRecognition:
-
-	#### 1. IBM Watson (Excelent Quality) (Online)
-
-	- Sign up at https://www.ibm.com/watson/developercloud/speech-to-text.html and obtain an IBM Watson Speech to text username and password.
-
-	- Open watson.py with your IDE and enter your username and password for IBM_USERNAME and IBM_PASSWORD
-
-	- In terminal enter: `python watson.py`
-
-	#### 2. Or Sphinx (Ok Quality) (Offline)
-
-	- In terminal enter: `python sphinx.py`
-
-**Notice** : Step 6 may take hours to process. BUT, You only need to do the Up and Running steps once and from here you will only use the data base that you built to make speeches.
 
 ## Usage
 
-1. cd to Speech-Hacker/src
+# Command for training a model
 
-2. Open myspeech.txt and type whatever you want your figure to say. 
+speech-hacker -train -u IBM_USERNAME -p IBM_PASSWORD -d ABS_PATH_TO_YOUR_AUDIO_FILES_FOLDER
 
-	- Notice: You can take a look at myDict.py and have a quick glance over all the words and phrases that were created
 
-	- Notice: Save the file. 
+# Command for generating your custom speech
 
-	- Notice: To make the speaker pause, type *pause whenever you want. 
+speech-hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -t "WHAT_YOU WANT_TO_SAY" -g DESTINATION_FOR_REQUESTED_AUDIO
 
-	- Notice: Only use lower case letters
 
-	- Notice: Don't use periods, commas or other non-alphabetic characters
+If you would like to generate from a a text file, you can alternatively enter:
 
-3. In terminal enter: `python generate.py`
+speech-hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -f "ABS_PATH_OF_TEXT_FILE" -g DESTINATION_FOR_REQUESTED_AUDIO
 
-4. Tada! An audio file for the requested speech is created in the directory. 
+
+## Thanks
+
+Many thanks to the following GitHub users for contributing code and/or ideas:
+
+[aalireza](https://github.com/aalireza> "aalireza")
+[Stickerpants](https://github.com/Stickerpants> "Stickerpants")
+[girishramnani](https://github.com/Stickerpants> "girishramnani")
+[ochawkeye](https://github.com/ochawkeye> "ochawkeye")
+
+
