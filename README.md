@@ -47,7 +47,7 @@ I'll show you how to get started:
 
 3. Place all the audio files you found in a folder
 
-4. Acquire IBM Watson Speech to Text username and password at https://www.ibm.com/watson/developercloud/speech-to-text.html and obtain an IBM Watson Speech to text username and password. (For help visit: https://www.ibm.com/watson/developercloud/doc/getting_started/gs-credentials.shtml)
+4. Acquire IBM Watson Speech to Text username and password at https://www.ibm.com/watson/developercloud/speech-to-text.html (For help visit: [Here](https://www.ibm.com/watson/developercloud/doc/getting_started/gs-credentials.shtml> "IBM_GetStarted"))
 
 
 ## Usage
