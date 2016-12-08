@@ -42,7 +42,7 @@ I'll show you how to get started:
 
 2. Browse the internet to find reasonable amount of relatively good quality audio files spoken by your figure. (Convert them to WAV)
 
-3. Place all the audio files in a folder
+3. Place all the audio files you found in a folder
 
 4. Acquire IBM Watson Speech to Text username and password at https://www.ibm.com/watson/developercloud/speech-to-text.html and obtain an IBM Watson Speech to text username and password. (For help visit: https://www.ibm.com/watson/developercloud/doc/getting_started/gs-credentials.shtml)
 
@@ -60,7 +60,7 @@ I'll show you how to get started:
 
 
 
-If you would like to generate from a a text file, you can alternatively enter:
+If you would like to generate from a text file, you can alternatively enter:
 
 `speech-hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -f "ABS_PATH_OF_TEXT_FILE" -g DESTINATION_FOR_REQUESTED_AUDIO`
 
