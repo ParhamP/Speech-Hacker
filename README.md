@@ -32,7 +32,7 @@ I'll show you how to get started:
 
 ## Install
 
-pip install speech-hacker
+`pip install speech-hacker`
 
 
 ## Setup
@@ -51,17 +51,18 @@ pip install speech-hacker
 
 ### Command for training a model
 
-speech-hacker -train -u IBM_USERNAME -p IBM_PASSWORD -d ABS_PATH_TO_YOUR_AUDIO_FILES_FOLDER
+`speech-hacker -train -u IBM_USERNAME -p IBM_PASSWORD -d ABS_PATH_TO_YOUR_AUDIO_FILES_FOLDER`
 
 
 ### Command for generating your custom speech
 
-speech-hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -t "WHAT_YOU WANT_TO_SAY" -g DESTINATION_FOR_REQUESTED_AUDIO
+`speech-hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -t "WHAT_YOU WANT_TO_SAY" -g DESTINATION_FOR_REQUESTED_AUDIO`
+
 
 
 If you would like to generate from a a text file, you can alternatively enter:
 
-speech-hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -f "ABS_PATH_OF_TEXT_FILE" -g DESTINATION_FOR_REQUESTED_AUDIO
+`speech-hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -f "ABS_PATH_OF_TEXT_FILE" -g DESTINATION_FOR_REQUESTED_AUDIO`
 
 
 ## Thanks
