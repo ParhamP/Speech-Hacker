@@ -1,0 +1,69 @@
+#!/usr/bin/env python
+
+"""
+Copyright 2016 Parham Pourdavood
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+import argparse
+import generator
+import trainer
+
+
+def argument_handler():
+    parser = argparse.ArgumentParser()
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("-train", "--train",
+                       help="Training mode", action='store_true')
+    parser.add_argument("-u", "--username", help="IBM Watson API Username",
+                        type=str)
+    parser.add_argument("-p", "--password", help="IBM Watson API Password",
+                        type=str)
+    parser.add_argument("-m", "--model", type=str,
+                        help=("Model that'd be used for Watson, default is" +
+                              " en-US_BroadbandModel"),
+                        default="en-US_BroadbandModel")
+    parser.add_argument("-v", "--verbose", help="print stage of the program",
+                        action='store_true')
+    group.add_argument("-generate", "--generate",
+                       help="Generation mode", action='store_true')
+    parser.add_argument("-d", "--src_dir",
+                        help="Absolute path to directory of audio files",
+                        type=str)
+    parser.add_argument("-t", "--text_cmd", help="The text for your speech",
+                        type=str)
+    parser.add_argument("-g", "--output_dest", help=" dest for your audio" +
+                        "output", type=str)
+    parser.add_argument("-f", "--text_file", help="abs path to speech text" +
+                        "file", type=str)
+    args = parser.parse_args()
+    return (args.train, args.username, args.password, args.model,
+            args.verbose, args.generate, args.src_dir, args.text_cmd,
+            args.output_dest, args.text_file)
+
+
+if __name__ == '__main__':
+    train, username, password, model, verbose, generate, src_dir, text_cmd, output_dest, text_file = argument_handler()
+    if generate:
+        if text_cmd:
+            generator.audio_generator(src_dir, text_cmd, output_dest)
+        else:
+            with open(text_file) as f:
+                text = f.read()
+            generator.audio_generator(src_dir, text, output_dest)
+    elif train:
+        my_trainer = trainer.Trainer(username, password, src_dir, model=model)
+        with my_trainer as training_context:
+            training_context.dictionary_maker(verbose=verbose)
+        my_trainer.audio_dictionary(src_dir)
