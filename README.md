@@ -49,12 +49,12 @@ pip install speech-hacker
 
 ## Usage
 
-# Command for training a model
+### Command for training a model
 
 speech-hacker -train -u IBM_USERNAME -p IBM_PASSWORD -d ABS_PATH_TO_YOUR_AUDIO_FILES_FOLDER
 
 
-# Command for generating your custom speech
+### Command for generating your custom speech
 
 speech-hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -t "WHAT_YOU WANT_TO_SAY" -g DESTINATION_FOR_REQUESTED_AUDIO
 
@@ -69,8 +69,11 @@ speech-hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -f "ABS_PATH_OF_TEXT_FILE" 
 Many thanks to the following GitHub users for contributing code and/or ideas:
 
 [aalireza](https://github.com/aalireza> "aalireza")
+
 [Stickerpants](https://github.com/Stickerpants> "Stickerpants")
+
 [girishramnani](https://github.com/Stickerpants> "girishramnani")
+
 [ochawkeye](https://github.com/ochawkeye> "ochawkeye")
 
 
