@@ -76,7 +76,7 @@ Many thanks to the following GitHub users for contributing code and/or ideas:
 
 [Stickerpants](https://github.com/Stickerpants> "Stickerpants")
 
-[girishramnani](https://github.com/Stickerpants> "girishramnani")
+[girishramnani](https://github.com/girishramnani> "girishramnani")
 
 [ochawkeye](https://github.com/ochawkeye> "ochawkeye")
 
