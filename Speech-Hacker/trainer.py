@@ -1,5 +1,5 @@
 """
-Copyright 2016 Parham Pourdavood and Alireza Rafiei
+Copyright 2016 Parham Pourdavood
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -89,12 +89,20 @@ class Trainer(object):
                         print ("{} is not in production, " +
                                "moving to production...").format(word)
 
-    def audio_dictionary(self, src_dir):
+    def model_maker(self):
         dict = {}
-        for root, dirs, filenames in os.walk(src_dir + "/dictionary"):
-            for file in filenames:
-                if file.endswith(".wav"):
-                    dict[file[:-4].lower()] = "dictionary/" + file
-                    output_file = open(src_dir + '/myDict.py', 'w')
-                    output_file.write(str(dict))
-        print "Success! A model was trained at " + src_dir
+        # Flag will let us know if at least a WAV file was found to make model
+        flag = 0
+        for file in os.listdir(self.src_dir + "/dictionary"):
+            if file.endswith(".wav"):
+                dict[file[:-4].lower()] = "dictionary/" + file
+                output_file = open(self.src_dir + '/myDict.py', 'w')
+                output_file.write(str(dict))
+                flag = 1
+        if flag:
+            print('\033[94m' + "Success! A model was trained at " +
+                  self.src_dir + '\033[0m')
+        else:
+            print('\033[91m' + "Could not make a model. " +
+                  "No WAV file was found in the directory you chose." +
+                  '\033[0m')
