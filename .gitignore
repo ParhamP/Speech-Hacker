@@ -1,2 +1,4 @@
 .DS_Store
 dist
+Speech-Hacker/generator.pyc
+Speech-Hacker/trainer.pyc

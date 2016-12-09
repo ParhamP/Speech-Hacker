@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright 2016 Parham Pourdavood and Alireza Rafiei
+Copyright 2016 Parham Pourdavood
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ def argument_handler():
                        help="Generation mode", action='store_true')
     parser.add_argument("-d", "--src_dir",
                         help="Absolute path to directory of audio files",
-                        type=str)
+                        type=str, required=True)
     parser.add_argument("-t", "--text_cmd", help="The text for your speech",
                         type=str)
     parser.add_argument("-g", "--output_dest", help=" dest for your audio" +
@@ -66,4 +66,4 @@ if __name__ == '__main__':
         my_trainer = trainer.Trainer(username, password, src_dir, model=model)
         with my_trainer as training_context:
             training_context.dictionary_maker(verbose=verbose)
-        my_trainer.audio_dictionary(src_dir)
+        my_trainer.model_maker()
