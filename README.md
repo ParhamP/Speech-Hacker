@@ -11,9 +11,11 @@ Would you like to make any famous figure speak whatever you want? Use Speech-Hac
 Speech-Hacker takes a large data base of audio speeches spoken by your chosen figure and employes Simple Audio Indexer (Using Watson Speech API) to split them on words and to create smaller chunks of audio files containing those words. Finally, your desired speech's words and phrases get associated with audio chunks that were created and converted, so that you can receive a brand new speech spoken by your figure.
 
 
-## Significant Imporvement in New Version
+### Significant Imporvement in New Version
 
 In earlier versions, Speech-Hacker was using pydub to split words based on amount of silence between them. That worked, but it wasn't as smart as we wanted to be. Therefore, we thought of using IBM Watson Speech API to detect words. Of course, we got much better results! SimpleAudioIndexer was built as a separate project to help us implement this functionality for Speech-hacker. 
+
+
 
 I'll show you how to get started:
 
