@@ -97,8 +97,20 @@ If you would like to generate from a text file, you can alternatively enter:
 
 ## Samples
 
+I trained President Obama's speeches and here are some audio samples that I generated. Take a listen!
+
+
+
+Black Friday was the best thing in the world! Did you go shopping?
 
 [![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0 "Audio_Sample" )
+
+
+Make America Great Again!
+
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent/s/mn8dwr2f0upmdnz/output0.wav?dl=0 "Audio_Sample" )
+
+
 
 
 ## Thanks
