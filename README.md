@@ -106,5 +106,5 @@ Many thanks to the following GitHub users for contributing code and/or ideas:
 
 [ochawkeye](https://github.com/ochawkeye> "ochawkeye")
 
-![](sounds/output2.wav)
+![](sounds/output3.mp3)
 
