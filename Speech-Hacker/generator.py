@@ -38,6 +38,11 @@ def audio_generator(dict_dir, text, output_dest):
             if textList[i] in myDict.keys():
                 f.write("file " + myDict[textList[i]] + "\n")
 
+    # Check to see if the file is not empty (at least a word was generated)
+    if os.stat(dict_dir + '/list.txt').st_size == 0:
+        raise Exception('\033[91m' + "None of the words you entered was" +
+                        " spoken by your figure." + '\033[0m')
+
     # If a file with the default name exits, create a new name with a
     # new suffix
     res = 0
