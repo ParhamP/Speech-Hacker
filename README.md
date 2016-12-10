@@ -94,6 +94,13 @@ If you would like to generate from a text file, you can alternatively enter:
 
 
 
+
+## Samples
+
+
+[![IMAGE ALT TEXT](images/player.png)](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0 "Audio_Sample" )
+
+
 ## Thanks
 
 Many thanks to the following GitHub users for contributing code and/or ideas:
@@ -105,5 +112,5 @@ Many thanks to the following GitHub users for contributing code and/or ideas:
 [girishramnani](https://github.com/girishramnani> "girishramnani")
 
 [ochawkeye](https://github.com/ochawkeye> "ochawkeye")
-[![IMAGE ALT TEXT](images/screen.png)](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0 "Youtube_Video" )
+
 
