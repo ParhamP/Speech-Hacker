@@ -98,7 +98,7 @@ If you would like to generate from a text file, you can alternatively enter:
 ## Samples
 
 
-[![IMAGE ALT TEXT](images/player.png)](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0 "Audio_Sample" )
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0 "Audio_Sample" )
 
 
 ## Thanks
