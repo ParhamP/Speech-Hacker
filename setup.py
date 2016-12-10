@@ -6,7 +6,7 @@ from distutils.core import setup
 setup(
   name = 'Speech-Hacker',
   packages=['Speech-Hacker'],
-  version = '0.6',
+  version = '0.7',
   scripts=['Speech-Hacker/Speech-Hacker', 'Speech-Hacker/generator.py',
            'Speech-Hacker/trainer.py'],
   description = "Makes famous people speak whatever you wish by linking their words",
@@ -14,7 +14,7 @@ setup(
   author = 'Parham Pourdavood',
   author_email = 'ppourdavood@gmail.com',
   url = 'https://github.com/parhamp/Speech-Hacker',
-  download_url = 'https://github.com/parhamp/Speech-Hacker/tarball/0.6',
+  download_url = 'https://github.com/parhamp/Speech-Hacker/tarball/0.7',
   keywords = ['Speech', 'Linking Words', 'Speech Hacking', 'audio', 'ibm', 'watson', 'simpleaudioindexer'], # arbitrary keywords
   classifiers = [],
   install_requires = ['SimpleAudioIndexer'],

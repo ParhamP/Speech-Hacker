@@ -69,7 +69,7 @@ I'll show you how to get started:
 
 
 
-If you would like to generate from a text file, you can alternatively enter:
+#### If you would like to generate from a text file, you can alternatively enter:
 
 `Speech-Hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -f "ABS_PATH_OF_TEXT_FILE" -g DESTINATION_FOR_REQUESTED_AUDIO`
 
@@ -105,7 +105,7 @@ If you would like to generate from a text file, you can alternatively enter:
 
 
 
-"Let me give you an example when I was in Washington I fought hard to make sure your rights are under safety, like social security and other things."
+"Let me give you an example. When I was in Washington, I fought hard to make sure your rights are under safety, like social security and other things."
 
 [![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/1mhp9xz95weh4wu/output22.wav?dl=0
  "Audio_Sample" )
@@ -131,16 +131,14 @@ If you would like to generate from a text file, you can alternatively enter:
 
 
 
-"I want a job after this. i'm sick of American people!"
+"I want a better job after this because this one did not make me sick enough!
 
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/op1vnu6gc6przio/output9.wav?dl=0 "Audio_Sample" )
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/98kjcwytbaazjna/output46.wav?dl=0 "Audio_Sample" )
 
 
+Make america great again and long live alt right! I am not sure of course just remember what i said.
 
-"I get that I let you down; however, I will get here again one day to make America Great Again!"
-
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/5uor761l6010sxk/output27.wav?dl=0 "Audio_Sample" )
-
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/0hns73x8nri5y5d/output70.wav?dl=0 "Audio_Sample" )
 
 
 
