@@ -95,11 +95,12 @@ class Trainer(object):
         flag = 0
         for file in os.listdir(self.src_dir + "/dictionary"):
             if file.endswith(".wav"):
-                dict[file[:-4].lower()] = "dictionary/" + file
-                output_file = open(self.src_dir + '/myDict.py', 'w')
-                output_file.write(str(dict))
                 flag = 1
+                dict[file[:-4].lower()] = "dictionary/" + file
         if flag:
+            # Write the generated dictionary to myDict.py
+            with open(self.src_dir + '/myDict.py', 'w') as output_file:
+                output_file.write(str(dict))
             print('\033[94m' + "Success! A model was trained at " +
                   self.src_dir + '\033[0m')
         else:
