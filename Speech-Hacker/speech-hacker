@@ -19,11 +19,13 @@ limitations under the License.
 import argparse
 import generator
 import trainer
+import os
 
 
 def argument_handler():
     parser = argparse.ArgumentParser()
-    group = parser.add_mutually_exclusive_group()
+    group = parser.add_mutually_exclusive_group(required=True)
+    group2 = parser.add_mutually_exclusive_group()
     group.add_argument("-train", "--train",
                        help="Training mode", action='store_true')
     parser.add_argument("-u", "--username", help="IBM Watson API Username",
@@ -41,13 +43,22 @@ def argument_handler():
     parser.add_argument("-d", "--src_dir",
                         help="Absolute path to directory of audio files",
                         type=str, required=True)
-    parser.add_argument("-t", "--text_cmd", help="The text for your speech",
+    group2.add_argument("-t", "--text_cmd", help="The text for your speech",
                         type=str)
     parser.add_argument("-g", "--output_dest", help=" dest for your audio" +
-                        "output", type=str)
-    parser.add_argument("-f", "--text_file", help="abs path to speech text" +
+                        "output", type=str, default=os.path.expanduser("~"))
+    group2.add_argument("-f", "--text_file", help="abs path to speech text" +
                         "file", type=str)
     args = parser.parse_args()
+
+    if args.train:
+        if not args.password or not args.username:
+            parser.error("Both username and password required for training.")
+    if args.generate:
+        if not args.text_cmd or not args.text_file:
+            parser.error("Either text_cmd or text_file is required for" +
+                         " -generate")
+
     return (args.train, args.username, args.password, args.model,
             args.verbose, args.generate, args.src_dir, args.text_cmd,
             args.output_dest, args.text_file)
