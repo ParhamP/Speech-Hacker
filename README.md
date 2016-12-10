@@ -108,7 +108,7 @@ Black Friday was the best thing in the world! Did you go shopping?
 
 Make America Great Again!
 
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent/s/mn8dwr2f0upmdnz/output0.wav?dl=0 "Audio_Sample" )
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/mn8dwr2f0upmdnz/output0.wav?dl=0 "Audio_Sample" )
 
 
 
