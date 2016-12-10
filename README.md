@@ -11,6 +11,10 @@ Would you like to make any famous figure speak whatever you want? Use Speech-Hac
 Speech-Hacker takes a large data base of audio speeches spoken by your chosen figure and employes Simple Audio Indexer (Using Watson Speech API) to split them on words and to create smaller chunks of audio files containing those words. Finally, your desired speech's words and phrases get associated with audio chunks that were created and converted, so that you can receive a brand new speech spoken by your figure.
 
 
+## Significant Imporvement in New Version
+
+In earlier versions, Speech-Hacker was using pydub to split words based on amount of silence between them. That worked, but it wasn't as smart as we wanted to be. Therefore, we thought of using IBM Watson Speech API to detect words. Of course, we got much better results! SimpleAudioIndexer was built as a separate project to help us implement this functionality for Speech-hacker. 
+
 I'll show you how to get started:
 
    1. [Dependencies](https://github.com/ParhamP/Speech-Hacker#dependencies "Dependencies")
@@ -66,6 +70,24 @@ I'll show you how to get started:
 If you would like to generate from a text file, you can alternatively enter:
 
 `Speech-Hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -f "ABS_PATH_OF_TEXT_FILE" -g DESTINATION_FOR_REQUESTED_AUDIO`
+
+
+Arguments Description:
+
+`-train` : Training mode
+
+`IBM_USERNAME` : IBM Watson Speech to Text username
+
+`IBM_PASWORD` : IBM Watson Speech to Text password
+
+`ABS_PATH_TO_YOUR_AUDIO_FILES_FOLDER` : Absolute path to the folder you placed the audio of your figure
+
+`-generate` : Generating mode
+
+`ABS_PATH_TO_TRAINED_MODEL` : Absolute path of the folder of audios you entered when training.
+
+`DESTINATION_FOR_REQUESTED_AUDIO` : The destination you would like to export your generated audio to. 
+
 
 
 ## Thanks
