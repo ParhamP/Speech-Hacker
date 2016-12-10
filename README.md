@@ -99,7 +99,7 @@ If you would like to generate from a text file, you can alternatively enter:
 
 
 
-I trained President Obama's speeches and here are some audio samples that I generated. Take a listen!
+#### I trained President Obama's speeches and here are some audio samples that I generated. Take a listen!
 
 
 
@@ -117,27 +117,29 @@ Black Friday was the best thing in the world! Did you go shopping?
 [![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0 "Audio_Sample" )
 
 
-Make America Great Again!
 
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/mn8dwr2f0upmdnz/output0.wav?dl=0 "Audio_Sample" )
 
 American people now should care about science more than before since we have problems in this country.
 
 [![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/tmi3p73hgq2k7xm/output1.wav?dl=0 "Audio_Sample" )
 
+
+
 Call me on your phone so we can talk about important issues.
 
 [![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/piyagv6e6p8fccf/output24.wav?dl=0 "Audio_Sample" )
+
+
 
 I want a job after this. i'm sick of American people!
 
 [![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/op1vnu6gc6przio/output9.wav?dl=0 "Audio_Sample" )
 
 
-I get that I let you down; however, I will get here again one day.
 
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/qyswgn4qvniw42a/output10.wav?dl=0 "Audio_Sample" )
+I get that I let you down; however, I will get here again one day to make America Great Again!
 
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/5uor761l6010sxk/output27.wav?dl=0 "Audio_Sample" )
 
 
 
