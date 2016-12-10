@@ -99,7 +99,7 @@ I'll show you how to get started:
 
 
 
-#### I trained President Obama's speeches and here are some audio samples that I generated. Take a listen!
+#### I trained President Obama's speeches and here are some audio samples that I generated. Take a listen! (I made some of them to be twisted and funny. No offense :D)
 
 
 
