@@ -55,7 +55,7 @@ def argument_handler():
         if not args.password or not args.username:
             parser.error("Both username and password required for training.")
     if args.generate:
-        if not args.text_cmd or not args.text_file:
+        if not args.text_cmd and not args.text_file:
             parser.error("Either text_cmd or text_file is required for" +
                          " -generate")
 

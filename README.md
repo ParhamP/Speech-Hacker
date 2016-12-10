@@ -8,10 +8,10 @@
 
 Would you like to make any famous figure speak whatever you want? Use Speech-Hacker to train your own speaker and receive speeches spoken by them.
 
-Speech-Hacker takes a large data base of audio speeches spoken by your chosen figure and employes Simple Audio Indexer (Using Watson Speech API) to split them on words and to create smaller chunks of audio files containing those words. Finally, your desired speech's words and phrases get associated with audio chunks that were created and converted, so that you can receive a brand new speech spoken by your figure.
+Speech-Hacker takes a large data base of audio speeches spoken by your chosen figure and employs Simple Audio Indexer (Using Watson Speech API) to split them on words and to create smaller chunks of audio files containing those words. Finally, your desired speech's words and phrases get associated with audio chunks that were created and converted, so that you can receive a brand new speech spoken by your figure.
 
 
-### Significant Imporvement in New Version
+### Significant Improvement in New Version
 
 In earlier versions, Speech-Hacker was using pydub to split words based on amount of silence between them. That worked, but it wasn't as smart as we wanted to be. Therefore, we thought of using IBM Watson Speech API to detect words. Of course, we got much better results! SimpleAudioIndexer was built as a separate project to help us implement this functionality for Speech-hacker. 
 
@@ -60,7 +60,7 @@ I'll show you how to get started:
 
 ### Command for training a model
 
-`Speech-hacker -train -u IBM_USERNAME -p IBM_PASSWORD -d ABS_PATH_TO_YOUR_AUDIO_FILES_FOLDER`
+`Speech-Hacker -train -u IBM_USERNAME -p IBM_PASSWORD -d ABS_PATH_TO_YOUR_AUDIO_FILES_FOLDER`
 
 
 ### Command for generating your custom speech
