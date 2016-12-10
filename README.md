@@ -72,7 +72,9 @@ If you would like to generate from a text file, you can alternatively enter:
 `Speech-Hacker -generate -d ABS_PATH_TO_TRAINED_MODEL -f "ABS_PATH_OF_TEXT_FILE" -g DESTINATION_FOR_REQUESTED_AUDIO`
 
 
-Arguments Description:
+
+
+#### Arguments Description:
 
 `-train` : Training mode
 
