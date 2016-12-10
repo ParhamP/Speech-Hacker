@@ -105,6 +105,5 @@ Many thanks to the following GitHub users for contributing code and/or ideas:
 [girishramnani](https://github.com/girishramnani> "girishramnani")
 
 [ochawkeye](https://github.com/ochawkeye> "ochawkeye")
-
-![](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0)
+[![IMAGE ALT TEXT](images/screen.png)](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0 "Youtube_Video" )
 
