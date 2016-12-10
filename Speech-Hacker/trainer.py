@@ -92,17 +92,21 @@ class Trainer(object):
     def model_maker(self):
         dict = {}
         # Flag will let us know if at least a WAV file was found to make model
-        flag = 0
+        flag = False
         for file in os.listdir(self.src_dir + "/dictionary"):
             if file.endswith(".wav"):
-                flag = 1
+                flag = True
                 dict[file[:-4].lower()] = "dictionary/" + file
         if flag:
             # Write the generated dictionary to myDict.py
-            with open(self.src_dir + '/myDict.py', 'w') as output_file:
+            mod_dir = self.src_dir + '/myDict.py'
+            with open(mod_dir, 'w') as output_file:
                 output_file.write(str(dict))
-            print('\033[94m' + "Success! A model was trained at " +
-                  self.src_dir + '\033[0m')
+            if os.path.exists(mod_dir) and os.stat(mod_dir).st_size > 2:
+                print('\033[94m' + "Success! A model was trained at " +
+                      self.src_dir + '\033[0m')
+            else:
+                print("Your model could not be created.")
         else:
             print('\033[91m' + "Could not make a model. " +
                   "No WAV file was found in the directory you chose." +

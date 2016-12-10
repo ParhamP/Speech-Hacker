@@ -71,4 +71,4 @@ def audio_generator(dict_dir, text, output_dest):
                str(res) + ".wav" + '\033[0m')
     else:
         print ("Speech-Hacker: " '\033[91m' +
-            "Failed to generate your requested audio." + '\033[0m')
+               "Failed to generate your requested audio." + '\033[0m')
