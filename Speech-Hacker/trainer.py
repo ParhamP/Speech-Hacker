@@ -96,7 +96,7 @@ class Trainer(object):
         for file in os.listdir(self.src_dir + "/dictionary"):
             if file.endswith(".wav"):
                 flag = True
-                dict[file[:-4].lower().replace("_", "'")] = "dictionary/" +file
+                dict[file[:-4].lower().replace("_", "'")] = "dictionary/" + file
         if flag:
             # Write the generated dictionary to myDict.py
             mod_dir = self.src_dir + '/myDict.py'

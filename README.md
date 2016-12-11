@@ -17,7 +17,53 @@ In earlier versions, Speech-Hacker was using pydub to split words based on amoun
 
 
 
-I'll show you how to get started:
+## Samples
+
+
+
+#### I trained President Obama's speeches and here are some audio samples that I generated. Take a listen! (I made some of them to be twisted and funny. No offense :D)
+
+
+
+
+
+"Let me give you an example. When I was in Washington, I fought hard to make sure your rights are under safety, like social security and other things."
+
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/1mhp9xz95weh4wu/output22.wav?dl=0
+ "Audio_Sample" )
+
+
+
+"Black Friday was the best thing in the world! Did you go shopping?"
+
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0 "Audio_Sample" )
+
+
+
+"American people now should care about science more than before since we have problems in this country."
+
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/tmi3p73hgq2k7xm/output1.wav?dl=0 "Audio_Sample" )
+
+
+
+"Call me on your phone so we can talk about important issues."
+
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/piyagv6e6p8fccf/output24.wav?dl=0 "Audio_Sample" )
+
+
+
+"I want a better job after this because this one did not make me sick enough!
+
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/98kjcwytbaazjna/output46.wav?dl=0 "Audio_Sample" )
+
+
+"Make america great again and long live alt right! I am not sure of course what I just said!""
+
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/gfuncimepvu9fs5/output71.wav?dl=0 "Audio_Sample" )
+
+
+
+#### I'll show you how to get started:
 
    1. [Dependencies](https://github.com/ParhamP/Speech-Hacker#dependencies "Dependencies")
 
@@ -26,6 +72,8 @@ I'll show you how to get started:
    3. [Setup](https://github.com/ParhamP/Speech-Hacker#setup "Setup")
 
    4. [Usage](https://github.com/ParhamP/Speech-Hacker#usage "Usage")
+
+   5. [Thanks](https://github.com/ParhamP/Speech-Hacker#thanks "Thanks")
 
 
 ## Dependencies
@@ -94,50 +142,6 @@ I'll show you how to get started:
 
 
 
-
-## Samples
-
-
-
-#### I trained President Obama's speeches and here are some audio samples that I generated. Take a listen! (I made some of them to be twisted and funny. No offense :D)
-
-
-
-
-
-"Let me give you an example. When I was in Washington, I fought hard to make sure your rights are under safety, like social security and other things."
-
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/1mhp9xz95weh4wu/output22.wav?dl=0
- "Audio_Sample" )
-
-
-
-"Black Friday was the best thing in the world! Did you go shopping?"
-
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0 "Audio_Sample" )
-
-
-
-"American people now should care about science more than before since we have problems in this country."
-
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/tmi3p73hgq2k7xm/output1.wav?dl=0 "Audio_Sample" )
-
-
-
-"Call me on your phone so we can talk about important issues."
-
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/piyagv6e6p8fccf/output24.wav?dl=0 "Audio_Sample" )
-
-
-
-"I want a better job after this because this one did not make me sick enough!
-
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/98kjcwytbaazjna/output46.wav?dl=0 "Audio_Sample" )
-
-
-Make america great again and long live alt right! I am not sure of course what I just said!
-
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/gfuncimepvu9fs5/output71.wav?dl=0 "Audio_Sample" )
 
 
 
