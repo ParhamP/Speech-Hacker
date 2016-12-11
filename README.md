@@ -118,7 +118,6 @@ I'll show you how to get started:
 
 
 
-
 "American people now should care about science more than before since we have problems in this country."
 
 [![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/tmi3p73hgq2k7xm/output1.wav?dl=0 "Audio_Sample" )
@@ -136,9 +135,9 @@ I'll show you how to get started:
 [![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/98kjcwytbaazjna/output46.wav?dl=0 "Audio_Sample" )
 
 
-Make america great again and long live alt right! I am not sure of course just remember what i said.
+Make america great again and long live alt right! I am not sure of course what I just said!
 
-[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/0hns73x8nri5y5d/output70.wav?dl=0 "Audio_Sample" )
+[![IMAGE ALT TEXT](images/player2.png)](https://dl.dropboxusercontent.com/s/gfuncimepvu9fs5/output71.wav?dl=0 "Audio_Sample" )
 
 
 
