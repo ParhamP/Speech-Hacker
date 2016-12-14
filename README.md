@@ -63,7 +63,7 @@ In earlier versions, Speech-Hacker was using pydub to split words based on amoun
 
 
 
-#### I'll show you how to get started:
+## Get Started
 
    1. [Dependencies](https://github.com/ParhamP/Speech-Hacker#dependencies "Dependencies")
 
