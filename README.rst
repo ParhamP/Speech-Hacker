@@ -24,46 +24,43 @@ to index words. Of course, we got much better results!
 SimpleAudioIndexer was built as a separate project to help us implement
 this functionality for Speech-hacker.
 
-Samples
--------
-I trained President Obama's speeches and here are some audio samples that I generated. Take a listen!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Samples (Trained by President Obama's Speeches)
+---------------------------------------------------
+
+.. image:: http://www.kohls.com/media/38.0.0-339/images/thumb/videoPlayer_Icon.png
+	:target: https://dl.dropboxusercontent.com/s/1mhp9xz95weh4wu/output22.wav?dl=0
 
 "Let me give you an example. When I was in Washington, I fought hard to
 make sure your rights are under safety, like social security and other
 things."
 
 .. image:: http://www.kohls.com/media/38.0.0-339/images/thumb/videoPlayer_Icon.png
-	:target: https://dl.dropboxusercontent.com/s/1mhp9xz95weh4wu/output22.wav?dl=0
+	:target: https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0
 
 "Black Friday was the best thing in the world! Did you go shopping?"
 
 .. image:: http://www.kohls.com/media/38.0.0-339/images/thumb/videoPlayer_Icon.png
-	:target: https://dl.dropboxusercontent.com/s/itu5156itn1usnr/output23.wav?dl=0
+	:target: https://dl.dropboxusercontent.com/s/tmi3p73hgq2k7xm/output1.wav?dl=0
 
 "American people now should care about science more than before since we
 have problems in this country."
 
 .. image:: http://www.kohls.com/media/38.0.0-339/images/thumb/videoPlayer_Icon.png
-	:target: https://dl.dropboxusercontent.com/s/tmi3p73hgq2k7xm/output1.wav?dl=0
+	:target: https://dl.dropboxusercontent.com/s/piyagv6e6p8fccf/output24.wav?dl=0
 
 "Call me on your phone so we can talk about important issues."
 
 .. image:: http://www.kohls.com/media/38.0.0-339/images/thumb/videoPlayer_Icon.png
-	:target: https://dl.dropboxusercontent.com/s/piyagv6e6p8fccf/output24.wav?dl=0
+	:target: https://dl.dropboxusercontent.com/s/98kjcwytbaazjna/output46.wav?dl=0
 
 "I want a better job after this because this one did not make me sick
 enough!
 
 .. image:: http://www.kohls.com/media/38.0.0-339/images/thumb/videoPlayer_Icon.png
-	:target: https://dl.dropboxusercontent.com/s/98kjcwytbaazjna/output46.wav?dl=0
+	:target: https://dl.dropboxusercontent.com/s/gfuncimepvu9fs5/output71.wav?dl=0
 
 "Make america great again and long live alt right! I am not sure of
 course what I just said!""
-
-.. image:: http://www.kohls.com/media/38.0.0-339/images/thumb/videoPlayer_Icon.png
-	:target: https://dl.dropboxusercontent.com/s/gfuncimepvu9fs5/output71.wav?dl=0
-
 
 Get Started
 -----------
