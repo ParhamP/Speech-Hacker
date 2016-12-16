@@ -1,12 +1,11 @@
 Speech-Hacker (New Release)
 ===========================
-
-Description
------------
-
 Would you like to make any famous figure speak whatever you want? Use
 Speech-Hacker to train your own speaker and receive speeches spoken by
 them.
+
+Description
+-----------
 
 Speech-Hacker takes a large data base of audio speeches spoken by your
 chosen figure and employs Simple Audio Indexer (Using Watson Speech API)
@@ -29,7 +28,7 @@ Samples
 -------
 
 I trained President Obama's speeches and here are some audio samples that I generated. Take a listen!
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 "Let me give you an example. When I was in Washington, I fought hard to
 make sure your rights are under safety, like social security and other
