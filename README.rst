@@ -26,7 +26,6 @@ this functionality for Speech-hacker.
 
 Samples
 -------
-
 I trained President Obama's speeches and here are some audio samples that I generated. Take a listen!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
