@@ -1,11 +1,12 @@
 Speech-Hacker (New Release)
 ===========================
-Would you like to make any famous figure speak whatever you want? Use
-Speech-Hacker to train your own speaker and receive speeches spoken by
-them.
 
 Description
 -----------
+
+Would you like to make any famous figure speak whatever you want? Use
+Speech-Hacker to train your own speaker and receive speeches spoken by
+them.
 
 Speech-Hacker takes a large data base of audio speeches spoken by your
 chosen figure and employs Simple Audio Indexer (Using Watson Speech API)
