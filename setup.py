@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 with open("README.rst", "rb") as f:
     long_description = f.read()
@@ -6,7 +6,7 @@ with open("README.rst", "rb") as f:
 setup(
     name='Speech-Hacker',
     packages=['Speech-Hacker'],
-    version='1.9',
+    version='2.1',
     scripts=['Speech-Hacker/Speech-Hacker', 'Speech-Hacker/generator.py',
              'Speech-Hacker/trainer.py'],
     description="Makes famous people speak whatever you wish by" +
