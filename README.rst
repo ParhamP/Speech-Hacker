@@ -81,7 +81,7 @@ Dependencies
 1. Python 2.7
 
 2. `Simple Audio
-   Indexer <https://github.com/aalireza/SimpleAudioIndexer%3E>`__
+   Indexer <https://github.com/aalireza/SimpleAudioIndexer>`__
 
 3. IBM Watson Speech API Username and Password
 
@@ -107,7 +107,7 @@ Setup
 4. Acquire IBM Watson Speech to Text username and password at
    https://www.ibm.com/watson/developercloud/speech-to-text.html (For
    help visit:
-   `Here <https://www.ibm.com/watson/developercloud/doc/getting_started/gs-credentials.shtml%3E>`__)
+   `Here <https://www.ibm.com/watson/developercloud/doc/getting_started/gs-credentials.shtml>`__)
 
 Usage
 -----
@@ -153,10 +153,10 @@ Thanks
 Many thanks to the following GitHub users for contributing code and/or
 ideas:
 
-`aalireza <https://github.com/aalireza%3E>`__
+`aalireza <https://github.com/aalireza>`__
 
-`Stickerpants <https://github.com/Stickerpants%3E>`__
+`Stickerpants <https://github.com/Stickerpants>`__
 
-`girishramnani <https://github.com/girishramnani%3E>`__
+`girishramnani <https://github.com/girishramnani>`__
 
-`ochawkeye <https://github.com/ochawkeye%3E>`__
+`ochawkeye <https://github.com/ochawkeye>`__
