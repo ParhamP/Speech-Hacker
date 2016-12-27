@@ -14,10 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-import os
-import subprocess
 import ast
-from distutils.spawn import find_executable
+import os
+from pydub import AudioSegment
 
 
 def audio_generator(dict_dir, text, output_dest):
@@ -25,21 +24,16 @@ def audio_generator(dict_dir, text, output_dest):
     with open(dict_dir + "/myDict.py") as f:
         myDict = ast.literal_eval(f.read())
 
-    # Open a text file to put in the data we receive from this module
-    with open(dict_dir + '/list.txt', 'w') as f:
-        # output_file = f.read()
+    textList = text.split(" ")
 
-        # Split the text on spaces and create a list with them
-        textList = text.split(" ")
+    mainList = []
 
-        # Loop through the list to receive the address of the audio file
-        # associated with the input given in speech.text
-        for i in range(len(textList)):
-            if textList[i] in myDict.keys():
-                f.write("file " + myDict[textList[i]] + "\n")
+    for i in textList:
+        if i in myDict.keys():
+            mainList.append(AudioSegment.from_wav(dict_dir + "/" + myDict[i]))
 
-    # Check to see if the file is not empty (at least a word was generated)
-    if os.stat(dict_dir + '/list.txt').st_size == 0:
+    # Check to see if at least one word was generated
+    if mainList == []:
         raise Exception('\033[91m' + "None of the words you entered was" +
                         " spoken by your figure." + '\033[0m')
 
@@ -49,21 +43,14 @@ def audio_generator(dict_dir, text, output_dest):
     while(os.path.exists(output_dest + "/output" + str(res) + ".wav")):
         res += 1
 
-    # Check to see if either ffmpeg or avconv is installed and assigns it
-    ffmpeg = os.path.basename(find_executable("ffmpeg") or
-                              find_executable("avconv"))
-    if ffmpeg is None:
-        raise Exception("Either ffmpeg or avconv is needed. " +
-                        "Neither is installed or accessible")
+    mainAudio = mainList[0]
 
-    # Use ffmpeg to process the generated list.txt and create a new audio file
-    # containing the speech of the text you had as input
-    subprocess.Popen(ffmpeg + ' -y -f concat -i ' + dict_dir +
-                     '/list.txt -c copy ' + output_dest + '/output' +
-                     str(res) + '.wav', shell=True,
-                     universal_newlines=True).communicate()
-    # Delete the unecessary files that was made for ffmpeg use
-    os.remove(dict_dir + '/list.txt')
+    # Concatenate selected audio words
+    for i in range(1, len(mainList)):
+        mainAudio += mainList[i]
+
+    # Export the joined audio
+    mainAudio.export(output_dest + '/output' + str(res) + '.wav', format="wav")
 
     if os.path.exists(output_dest + "/output" + str(res) + ".wav"):
         print ('\033[94m' + "Speech-Hacker: " +

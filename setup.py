@@ -6,7 +6,7 @@ with open("README.rst", "rb") as f:
 setup(
     name='Speech-Hacker',
     packages=['Speech-Hacker'],
-    version='2.1',
+    version='2.2',
     scripts=['Speech-Hacker/Speech-Hacker', 'Speech-Hacker/generator.py',
              'Speech-Hacker/trainer.py'],
     description="Makes famous people speak whatever you wish by" +
@@ -19,6 +19,6 @@ setup(
     keywords=['Speech', 'Linking Words', 'Speech Hacking', 'audio', 'ibm',
               'watson', 'simpleaudioindexer'],  # arbitrary keywords
     classifiers=[],
-    install_requires=['SimpleAudioIndexer'],
+    install_requires=['SimpleAudioIndexer', 'pydub'],
     license="Apache-2.0"
 )

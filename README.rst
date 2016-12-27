@@ -85,9 +85,7 @@ Dependencies
 
 3. IBM Watson Speech API Username and Password
 
-4. ffmpeg:
-   ``brew install ffmpeg --with-libvorbis --with-ffplay --with-theora``
-   (Mac), ``apt-get install ffmpeg libavcodec-extra-53`` (Linux)
+4. pydub
 
 Install
 -------
