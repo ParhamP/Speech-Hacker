@@ -52,18 +52,19 @@ class Trainer(object):
                     self.src_dir, word, self.src_dir, word),
                 shell=True).communicate()
         )
-        indexer = SimpleAudioIndexer(self.username, self.password,
-                                     self.src_dir, verbose=verbose)
+        indexer = SimpleAudioIndexer(mode="ibm", username_ibm=self.username, 
+                                     password_ibm=self.password,
+                                     src_dir=self.src_dir, verbose=verbose)
         indexer.index_audio(model=self.model)
-        timestamps = indexer.get_timestamped_audio()
+        timestamps = indexer.get_timestamps()
         for audio_basename in timestamps:
             for word_block in timestamps[audio_basename]:
-                word = (word_block[0]).replace("'", "_")
-                starting_second = word_block[1]
-                ending_second = word_block[2]
+                word = word_block.word.replace("'", "_")
+                starting_second = word_block.start
+                ending_second = word_block.end
                 if verbose:
-                    if word != word_block[0]:
-                        print (str(word_block[0]) +
+                    if word != word_block.word:
+                        print (str(word_block.word) +
                                " contains ' character, replacing with _")
                 self.audio_word_extractor(audio_basename, self.src_dir, word,
                                           starting_second, ending_second,
