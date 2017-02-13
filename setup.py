@@ -6,7 +6,7 @@ with open("README.rst", "rb") as f:
 setup(
     name='Speech-Hacker',
     packages=['Speech-Hacker'],
-    version='2.2',
+    version='2.3',
     scripts=['Speech-Hacker/Speech-Hacker', 'Speech-Hacker/generator.py',
              'Speech-Hacker/trainer.py'],
     description="Makes famous people speak whatever you wish by" +
