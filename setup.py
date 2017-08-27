@@ -11,7 +11,7 @@ setup(
              'Speech-Hacker/trainer.py'],
     description="Makes famous people speak whatever you wish by" +
                 "linking their words",
-    long_description=long_description,
+    long_description=str(long_description),
     author='Parham Pourdavood',
     author_email='ppourdavood@gmail.com',
     url='https://github.com/parhamp/Speech-Hacker',
