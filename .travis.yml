@@ -1,0 +1,36 @@
+os:
+  - linux
+python:
+  - "2.7"
+  - "3.6"
+  - "nightly" # currently points to 3.7-dev
+
+dist: trusty
+sudo: required
+language: python
+
+
+before_install:
+  # Show build setup
+  - uname -a
+  - cat /etc/os-release
+  - pwd
+  - free -tm
+  - python --version
+
+install:
+  # git describe requires complete history
+  - travis_retry git fetch --unshallow
+
+script: 
+  - python helpTest.py | grep Speech-Hacker
+
+after_success:
+  - echo "OK, all done."
+
+notifications:
+  email:
+    recipients:
+      - ralic.lo.eng@ieee.org
+    on_success: always # default: change
+    on_failure: never # default: always
